@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+A Software process automation enthusiast
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Make Phoenix raises from Ashes again.
+
+Hands-on Python, Ruby, PHP, C#, C++, C and Haskell.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[ReachMe](mailto:reachme@boynux.com)
