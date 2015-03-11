@@ -51,7 +51,7 @@ To solve above problems, we can use Ruby `autoload` method, defined in `Module` 
          style="display:block"
          data-ad-client="ca-pub-7360583392867579"
          data-ad-slot="4587256441"
-         data-ad-format="auto"></ins>
+         data-ad-format="rectangle"></ins>
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
