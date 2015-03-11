@@ -16,7 +16,8 @@ In Ruby a common way to load classes is using `require`. recently I realized tha
 <ins class="adsbygoogle adslot_1"
      style="display:inline-block"
      data-ad-client="ca-pub-7360583392867579"
-     data-ad-slot="4587256441"></ins>
+     data-ad-slot="4587256441"
+     data-ad-format="horizontal"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
