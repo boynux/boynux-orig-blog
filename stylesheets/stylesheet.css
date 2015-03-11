@@ -368,25 +368,6 @@ Full-Width Styles
   background: #212121;
 }
 
-ul.like-buttons{
-    float: left;
-    list-style: none;
-    margin: 5px 0 20px 0;
-    padding: 0;
-    width: 100%;
-}
-
-ul.like-buttons li{
-    display: block;
-    float: left;
-    margin-right: 10px;
-}
-
-li.twitter-like{
-    margin-top: 2px;
-}
-
-
 /*******************************************************************************
 Small Device Styles
 *******************************************************************************/
