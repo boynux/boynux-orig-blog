@@ -26,6 +26,7 @@ Let's see an example, I've a module with some other modules and classes defined 
 
     `File: lib/boynux.rb`
 
+    :::ruby
      module Boynux
      end
 
@@ -53,10 +54,10 @@ Let's see an example, I've a module with some other modules and classes defined 
     </script>
 </div>
 
-    Let's see how we can refactor above code with `autoload` and you can see the result.
+Let's see how we can refactor above code with `autoload` and you can see the result.
 
     `File: lib/boynux.rb`
-
+    :::ruby
     module Boynux
         module Module1
             autoload :Class1, 'lib/boynux/module1/class1'
