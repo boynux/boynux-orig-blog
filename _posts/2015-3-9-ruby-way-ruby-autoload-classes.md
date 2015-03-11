@@ -26,16 +26,17 @@ Let's see an example, I've a module with some other modules and classes defined 
 
 `File: lib/boynux.rb`
 
-    :::ruby
-    module Boynux
-    end
+```ruby
+module Boynux
+end
 
-    require 'lib/boynux/module1/class1'
-    require 'lib/boynux/module1/class2'
-    require 'lib/boynux/module1/module12/another_class1'
-    require 'lib/boynux/module2/another_class1'
-    require 'lib/boynux/module3/class3'
-    ...
+require 'lib/boynux/module1/class1'
+require 'lib/boynux/module1/class2'
+require 'lib/boynux/module1/module12/another_class1'
+require 'lib/boynux/module2/another_class1'
+require 'lib/boynux/module3/class3'
+...
+```
 
 As you see the code is not very clear which modules and classes are nested. You'll need to closely examine class path to understand that. When this `require` statements grow bigger and bigger, things get more complex and tedius and finally it's more probable to make mistakes in defining classes and modules.
 
@@ -57,25 +58,27 @@ To solve above problems, we can use Ruby `autoload` method, defined in `Module` 
 Let's see how we can refactor above code with `autoload` and you can see the result.
 
 `File: lib/boynux.rb`
-     :::ruby
-     module Boynux
-         module Module1
-             autoload :Class1, 'lib/boynux/module1/class1'
-             autoload :Class2, 'lib/boynux/module1/class2'
 
-             module Module12
-                 autoload :AnotherClass1, 'lib/boynux/module1/another_class1'
-             end
-         end
+```ruby
+module Boynux
+    module Module1
+        autoload :Class1, 'lib/boynux/module1/class1'
+        autoload :Class2, 'lib/boynux/module1/class2'
 
-         module Module2
-             autoload :AnotherClass1, 'lib/boynux/module2/another_class1'
-         end
+        module Module12
+            autoload :AnotherClass1, 'lib/boynux/module1/another_class1'
+        end
+    end
 
-         module Module3
-             autolaod :Class3, 'lib/boynux/module3/class3'
-         end
-     end
+    module Module2
+        autoload :AnotherClass1, 'lib/boynux/module2/another_class1'
+    end
+
+    module Module3
+        autolaod :Class3, 'lib/boynux/module3/class3'
+    end
+end
+```
 
 Personnay I prefer `autoload` feature and latest approach rather than requiring all clases like first example.
 
