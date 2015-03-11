@@ -14,7 +14,7 @@ In Ruby a common way to load classes is using `require`. recently I realized tha
 <div class="ads">
 <!-- Responsive Display -->
 <ins class="adsbygoogle adslot_1"
-     style="display:inline-block"
+     style="display:block"
      data-ad-client="ca-pub-7360583392867579"
      data-ad-slot="4587256441"
      data-ad-format="horizontal"></ins>
