@@ -24,24 +24,24 @@ In Ruby a common way to load classes is using `require`. recently I realized tha
 
 Let's see an example, I've a module with some other modules and classes defined like this:
 
-    `File: lib/boynux.rb`
+`File: lib/boynux.rb`
 
     :::ruby
-     module Boynux
-     end
+    module Boynux
+    end
 
-     require 'lib/boynux/module1/class1'
-     require 'lib/boynux/module1/class2'
-     require 'lib/boynux/module1/module12/another_class1'
-     require 'lib/boynux/module2/another_class1'
-     require 'lib/boynux/module3/class3'
-     ...
+    require 'lib/boynux/module1/class1'
+    require 'lib/boynux/module1/class2'
+    require 'lib/boynux/module1/module12/another_class1'
+    require 'lib/boynux/module2/another_class1'
+    require 'lib/boynux/module3/class3'
+    ...
 
-    As you see the code is not very clear which modules and classes are nested. You'll need to closely examine class path to understand that. When this `require` statements grow bigger and bigger, things get more complex and tedius and finally it's more probable to make mistakes in defining classes and modules.
+As you see the code is not very clear which modules and classes are nested. You'll need to closely examine class path to understand that. When this `require` statements grow bigger and bigger, things get more complex and tedius and finally it's more probable to make mistakes in defining classes and modules.
 
-    ### The Solution
+### The Solution
 
-    To solve above problems, we can use Ruby `autoload` method, defined in `Module` class. First of all `autoload` loads classes whenever you try to access them, meaning you don't need to load all classes at bootstrap stage of your app. This will add a significant performance to your application bootstrap stage. Secondly, your modules and classes will be more clear and easier to maintain. and finally refactoring your project adding/removing and moving classes and modules are a lot easier.
+To solve above problems, we can use Ruby `autoload` method, defined in `Module` class. First of all `autoload` loads classes whenever you try to access them, meaning you don't need to load all classes at bootstrap stage of your app. This will add a significant performance to your application bootstrap stage. Secondly, your modules and classes will be more clear and easier to maintain. and finally refactoring your project adding/removing and moving classes and modules are a lot easier.
 
 <div class="ads">
     <!-- Responsive Display -->
@@ -56,26 +56,26 @@ Let's see an example, I've a module with some other modules and classes defined 
 
 Let's see how we can refactor above code with `autoload` and you can see the result.
 
-    `File: lib/boynux.rb`
-    :::ruby
-    module Boynux
-        module Module1
-            autoload :Class1, 'lib/boynux/module1/class1'
-            autoload :Class2, 'lib/boynux/module1/class2'
+`File: lib/boynux.rb`
+     :::ruby
+     module Boynux
+         module Module1
+             autoload :Class1, 'lib/boynux/module1/class1'
+             autoload :Class2, 'lib/boynux/module1/class2'
 
-            module Module12
-                autoload :AnotherClass1, 'lib/boynux/module1/another_class1'
-            end
-        end
+             module Module12
+                 autoload :AnotherClass1, 'lib/boynux/module1/another_class1'
+             end
+         end
 
-        module Module2
-            autoload :AnotherClass1, 'lib/boynux/module2/another_class1'
-        end
+         module Module2
+             autoload :AnotherClass1, 'lib/boynux/module2/another_class1'
+         end
 
-        module Module3
-            autolaod :Class3, 'lib/boynux/module3/class3'
-        end
-    end
+         module Module3
+             autolaod :Class3, 'lib/boynux/module3/class3'
+         end
+     end
 
 Personnay I prefer `autoload` feature and latest approach rather than requiring all clases like first example.
 
