@@ -3,8 +3,8 @@ layout: default
 ---
 
 <div class="posts">
-  {% assign sorted_pages = site.pages | sort:"name" %}
-  {% for post in sorted_pages %}
+  {% assign sorted_pages = site.posts | sort:"name" %}
+  {% for post in sorted_posts %}
     <article class="post">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
