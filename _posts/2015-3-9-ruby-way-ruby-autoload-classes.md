@@ -3,8 +3,6 @@ layout: post
 title: Ruby autoload classes
 ---
 
-### The Problem
-
 In Ruby a common way to load classes is using `require`. recently I realized that in large projects with lots of classes this approach has some significant problems:
 
 *   Loading all class at project bootstrap causes unnecessary overhead.
