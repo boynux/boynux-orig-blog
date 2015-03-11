@@ -1,4 +1,7 @@
-## Ruby autoload classes
+---
+layout: post
+title: Ruby autoload classes
+---
 
 ### The Problem
 
@@ -21,18 +24,17 @@ In Ruby a common way to load classes is using `require`. recently I realized tha
 
 Let's see an example, I've a module with some other modules and classes defined like this:
 
-`File: lib/boynux.rb`
+    `File: lib/boynux.rb`
 
-    module Boynux
-    end
+     module Boynux
+     end
 
-    require 'lib/boynux/module1/class1'
-    require 'lib/boynux/module1/class2'
-    require 'lib/boynux/module1/module12/another_class1'
-    require 'lib/boynux/module2/another_class1'
-    require 'lib/boynux/module3/class3'
-    ...
-    `</pre>
+     require 'lib/boynux/module1/class1'
+     require 'lib/boynux/module1/class2'
+     require 'lib/boynux/module1/module12/another_class1'
+     require 'lib/boynux/module2/another_class1'
+     require 'lib/boynux/module3/class3'
+     ...
 
     As you see the code is not very clear which modules and classes are nested. You'll need to closely examine class path to understand that. When this `require` statements grow bigger and bigger, things get more complex and tedius and finally it's more probable to make mistakes in defining classes and modules.
 
@@ -55,7 +57,7 @@ Let's see an example, I've a module with some other modules and classes defined 
 
     `File: lib/boynux.rb`
 
-    <pre>`module Boynux
+    module Boynux
         module Module1
             autoload :Class1, 'lib/boynux/module1/class1'
             autoload :Class2, 'lib/boynux/module1/class2'
