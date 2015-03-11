@@ -13,7 +13,10 @@ layout: default
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
-  {% include facebook-share.html %}
-  {% include google-plus.html %}
+  <div class='date'>
+      {% include facebook-share.html %}
+      {% include google-plus.html %}
+  </div>
+
   {% include disqus.html %}
 </article>
