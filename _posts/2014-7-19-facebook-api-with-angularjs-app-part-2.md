@@ -11,13 +11,17 @@ Hi, This is the second part of "Facebook API with AngularJs app". If you haven't
 
 You can find explanations in the <a href="http://www.boynux.com/facebook-api-with-angularjs-app-part-1/" title="Using Facebook API with AngularJs app – Part 1" target="_blank">first part</a>, here I just show the code. 
 
-     angular.module ('myFacebookApp', ['bnx.module.facebook']);
+```javascript
+ angular.module ('myFacebookApp', ['bnx.module.facebook']);
+```
 
 And we need this HTML snippet somewhere in our document body. This directive is actually loads Facebook Javascripts. 
 
-    &lt;div ng-app="myFacebookApp"&gt;
-        &lt;facebook app-id="&lt;app-id&gt;"&gt;&lt;/facebook&gt;
-    &lt;/div&gt;
+```javascript
+<div ng-app="myFacebookApp">
+    <facebook app-id="<app-id>"></facebook>
+</div>
+```
 
 We are done! Very simple :) Now we have initialized Facebook API and it's ready to be used.
 
@@ -57,8 +61,9 @@ I want a Facebook login button in my app, so users can click and login using the
 
 Here is the Angular Directive for Facebook login button: 
 
-    &lt;facebook-login auto_logout="true" scope="basic_info"&gt;
-    &lt;/facebook-login&gt;
+```javascript
+    <facebook-login auto_logout="true" scope="basic_info"> </facebook-login>
+```
 
 <facebook-login auto_logout="true" scope="basic_info"></facebook-login> 
 
