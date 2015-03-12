@@ -1,3 +1,8 @@
+---
+layout: post
+title:  Using Facebook API with AngularJs app - Part 2
+---
+
 [<img class="size-medium wp-image-845 aligncenter" title="AngularJS Facebook" alt="Facebook API with AngularJs app" src="http://www.boynux.com/wp-content/uploads/2014/03/angularjs-facebook-300x120.png" width="300" height="120" />][1]
 
 Hi, This is the second part of "Facebook API with AngularJs app". If you haven't read the [first part][2] yet, I suggest you to read that first. 
