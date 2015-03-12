@@ -26,7 +26,7 @@ And we need this HTML snippet somewhere in our document body. This directive is 
 We are done! Very simple :) Now we have initialized Facebook API and it's ready to be used.
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script> 
-<script src="http://www.boynux.com/wp-content/uploads/2014/05/facebook.js"></script>
+<script src="//www.boynux.com/wp-content/uploads/2014/05/facebook.js"></script>
 
 <script language="javascript">
 var app = angular.module ('myFacebookApp', ['bnx.module.facebook']);
@@ -42,9 +42,9 @@ app.controller('mainCtrl', function ($scope, facebook) {
             } else {
                 $scope.user = null;
             }
-            });
         });
     });
+});
 </script> 
 
 ## 2. Login button
@@ -63,7 +63,7 @@ I want a Facebook login button in my app, so users can click and login using the
 Here is the Angular Directive for Facebook login button: 
 
 ```javascript
-    <facebook-login auto_logout="true" scope="basic_info"> </facebook-login>
+<facebook-login auto_logout="true" scope="basic_info"> </facebook-login>
 ```
 
 <facebook-login auto_logout="true" scope="basic_info"></facebook-login> 
@@ -72,8 +72,7 @@ That's it. This snippet will show a standard medium size Facebook login button a
 
 <div ng-app="myFacebookApp">
   <facebook app-id="1491187207767298"></facebook> 
-    <facebook-login scope="basic_info" auto_logout="true">
-  </facebook-login> 
+  <facebook-login scope="basic_info" auto_logout="true"></facebook-login> 
   <br /> <br /> 
   <div ng-controller='mainCtrl'>
     <div ng-if='!connected'>
