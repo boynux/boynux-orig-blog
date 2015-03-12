@@ -26,7 +26,7 @@ And we need this HTML snippet somewhere in our document body. This directive is 
 We are done! Very simple :) Now we have initialized Facebook API and it's ready to be used.
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script> 
-<script src="//www.boynux.com/wp-content/uploads/2014/05/facebook.js"></script>
+<script src="{{ site.baseurl }}/javascripts/facebook.js"></script>
 
 <script language="javascript">
 var app = angular.module ('myFacebookApp', ['bnx.module.facebook']);
@@ -65,8 +65,6 @@ Here is the Angular Directive for Facebook login button:
 ```javascript
 <facebook-login auto_logout="true" scope="basic_info"> </facebook-login>
 ```
-
-<facebook-login auto_logout="true" scope="basic_info"></facebook-login> 
 
 That's it. This snippet will show a standard medium size Facebook login button and grants `basic_info` access when user logs into her Facebook account. If you need more details on this please refer to mentioned Github repository. All details explained in code documents. Now you can see a login button right here. 
 
