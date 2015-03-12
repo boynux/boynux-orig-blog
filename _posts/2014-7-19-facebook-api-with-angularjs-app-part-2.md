@@ -27,6 +27,7 @@ We are done! Very simple :) Now we have initialized Facebook API and it's ready 
 
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script> 
 <script src="http://www.boynux.com/wp-content/uploads/2014/05/facebook.js"></script>
+
 <script language="javascript">
 var app = angular.module ('myFacebookApp', ['bnx.module.facebook']);
 app.controller('mainCtrl', function ($scope, facebook) {
@@ -70,7 +71,11 @@ Here is the Angular Directive for Facebook login button:
 That's it. This snippet will show a standard medium size Facebook login button and grants `basic_info` access when user logs into her Facebook account. If you need more details on this please refer to mentioned Github repository. All details explained in code documents. Now you can see a login button right here. 
 
 <div ng-app="myFacebookApp">
-  <facebook app-id="1491187207767298"></facebook> <facebook-login scope="basic_info" auto_logout="true"></facebook-login> <br /> <br /> <div ng-controller='mainCtrl'>
+  <facebook app-id="1491187207767298"></facebook> 
+    <facebook-login scope="basic_info" auto_logout="true">
+  </facebook-login> 
+  <br /> <br /> 
+  <div ng-controller='mainCtrl'>
     <div ng-if='!connected'>
       <p>
         <strong>Wait, please login using above button to continue reading...</strong>
