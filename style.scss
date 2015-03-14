@@ -308,3 +308,11 @@ li.twitter-like{
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
+p {
+    code {
+      background-color: #F9F2F4;
+      color: #039E00;
+    }
+}
