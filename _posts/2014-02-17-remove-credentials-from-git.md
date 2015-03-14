@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to remove credentials from GIT history!
+excerpt: Removing files from your GIT branch does not make them inaccessible throughout your GIT history. If you want to remove credentials from GIT read on.
 ---
 
 If you happen to read my other article about **[GIT push to multiple servers][2]** you might noticed that if you have your secret files pushed in your GIT at first place, just removing those files from your branch does not make them inaccessible throughout your GIT history. 
