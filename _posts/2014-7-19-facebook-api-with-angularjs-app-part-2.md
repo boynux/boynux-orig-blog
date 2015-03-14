@@ -49,6 +49,15 @@ app.controller('mainCtrl', function ($scope, facebook) {
 
 ## 2. Login button
 
+I want a Facebook login button in my app, so users can click and login using their Facebook account. [Facebook doesn&#39;t reveal account credentials to 3rd party apps]. We can get from a very basic information of user&#39;s public profile to full access to all photos and posts and albums. For purpose of this app I only setup minimum requirement which is &quot;Basic Info access&quot;. If you want to access more advanced information you&#39;ve to submit your app to be reviewed by Facebook first.
+
+Here is the Angular Directive for Facebook login button:
+
+```javascript
+<facebook-login auto_logout="true" scope="basic_info"> </facebook-login>
+```
+That&#39;s it. This snippet will show a standard medium size Facebook login button and grants `basic_info` access when user logs into her Facebook account. If you need more details on this please refer to mentioned Github repository. All details explained in code documents. Now you can see a login button right here.
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
 <!-- Display Large Rectangle -->
 <ins class="adsbygoogle" 
@@ -76,13 +85,6 @@ app.controller('mainCtrl', function ($scope, facebook) {
         {% endraw %}
       </p>
  
-<p>I want a Facebook login button in my app, so users can click and login using their Facebook account. [Facebook doesn&#39;t reveal account credentials to 3rd party apps]. We can get from a very basic information of user&#39;s public profile to full access to all photos and posts and albums. For purpose of this app I only setup minimum requirement which is &quot;Basic Info access&quot;. If you want to access more advanced information you&#39;ve to submit your app to be reviewed by Facebook first. </p>
-
-<p>Here is the Angular Directive for Facebook login button: </p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">facebook</span><span class="o">-</span><span class="nx">login</span> <span class="nx">auto_logout</span><span class="o">=</span><span class="s2">&quot;true&quot;</span> <span class="nx">scope</span><span class="o">=</span><span class="s2">&quot;basic_info&quot;</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="err">/facebook-login&gt;</span>
-</code></pre></div>
-<p>That&#39;s it. This snippet will show a standard medium size Facebook login button and grants <code>basic_info</code> access when user logs into her Facebook account. If you need more details on this please refer to mentioned Github repository. All details explained in code documents. Now you can see a login button right here. </p>
-
 <h2>3. Control Login action</h2>
 
 <p>Now we successfully added Login button to our page. You are reading these lines, thus I manged to capture your login status and display some hidden parts of this article. Here I explain how you can achieve that using this API.</p>
