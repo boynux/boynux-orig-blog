@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Scrum upside down
+excerpt: First of all you need well established procedures and roles, then we can adopt Scrum to facilitate the delivery process.
 ---
 
 > Disclaimer: I'm not against SCRUM in any way and the following lines are only my concerns about the fact that some people think SCRUM is going to solve all the software development management issues. Like any other tool adopting SCRUM to a broken organization or IT department will only makes things worse!
