@@ -1,7 +1,9 @@
 ---
 layout: post
 title: AngularJs Facebook integration how to
+excerpt: Have you ever wanted to integrate third party frameworks into AngluarJs? This is an explanation of AngularJs Facebook integration, in great details. I show you how to deal with asynchronous calls and prmises.
 ---
+
 If you've ever written any code in Javascript, you've already experienced asynchronous calls complexities. But that wouldn't be much difficult to overcome when you understand the basics.
 
 [<img class="size-medium wp-image-845 alignright" title="AngularJS Facebook" alt="AngularJS Facebook" src="http://www.boynux.com/wp-content/uploads/2014/03/angularjs-facebook-300x120.png" width="300" height="120" />][1]  
