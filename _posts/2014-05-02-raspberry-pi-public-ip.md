@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What is my Raspberry Pi public IP?
+excerpt: Raspberry Pi sends public IP adress behind NAT via Email. If you have problem accessing Raspberry Pi public IP address because it changes dymanically here is what you need.
 ---
 
 This is a continue to my project [Raspberry Pi VPN][2] server. In that article I explained how to create a VPN server with your Raspberry Pi. I did that and enabled my home router port forwarding for ports 22 (`SSH`) and 1723 (`PPTP`). It works perfectly but there is one small problem! Not very small though!
