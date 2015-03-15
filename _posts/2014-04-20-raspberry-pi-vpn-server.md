@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Raspberry Pi VPN Server
+excerpt: How to quickly set up a VPN server using Raspberry Pi, It's very easy to have Raspberry Pi VPN server at home. No external keyboard or HDMI needed to do this tutorial. All you need is ...
 ---
 
 I needed a way to access my home private network remotely. I decided to utilize existing **Raspberry Pi** as a VPN server. I'm going to install `Raspbian` as choice of operating system. 
