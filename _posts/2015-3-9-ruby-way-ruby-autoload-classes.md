@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Ruby autoload classes
+title: Ruby autoload class
+excerpt: It's very easy in Ruby to implement classes to autoload. If you don't know about Ruby autoload class feature here is a short description on how to utilize this feature to have cleaner codes.
 ---
 
 In Ruby a common way to load classes is using `require`. recently I realized that in large projects with lots of classes this approach has some significant problems:
