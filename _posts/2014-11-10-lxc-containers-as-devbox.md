@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Using LXC Containers as DevBox
+excerpt: LXC Containers are light and fast, doesn't consume lots of reasources and are very suitlable as a DevBox. But using them is tricky. Here is some practices to make them easier to use.
 ---
 
 I've been using LXC containers as a DevBox (ie. development environment) and also deployment containers in past few years. I've seen many developers using other tools like Vagrant + Virtual box and other full virtualizations and it's very common. Advantages of using container for developent boxes are, they are light weight and fast. During the time I observed some developers failing to use containers mainly because they don't know how to use them efficiently.
