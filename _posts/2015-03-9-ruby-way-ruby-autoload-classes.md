@@ -38,7 +38,7 @@ require 'lib/boynux/module3/class3'
 ...
 ```
 
-As you see the code is not very clear which modules and classes are nested. You'll need to closely examine class path to understand that. When this `require` statements grow bigger and bigger, things get more complex and tedius and finally it's more probable to make mistakes in defining classes and modules.
+As you see the code is not very clear which modules and classes are nested. You'll need to closely examine class path to understand that. When those `require` statements grow bigger and bigger. Things get more complex and tedius. Finally it's more probable to make mistakes in defining classes and modules.
 
 ### The Solution
 
@@ -81,9 +81,9 @@ module Boynux
 end
 ```
 
-Personnay I prefer `autoload` feature and latest approach rather than requiring all clases like first example.
+Personnay I prefer `autoload` feature and latest approach rather than `require`ing all clases like first example.
 
-`autoload` syntax is very simple and clear, first argument is a class name `symbol` and second argument a path to actual class' source.
+`autoload` syntax is very simple and clear, first argument is a class name `symbol` and second argument a path to the actual class' source.
 
 You can find more info about `autoload` at ruby docs [Module#autoload](http://ruby-doc.org/core-2.1.0/Module.html#method-i-autoload)
 
