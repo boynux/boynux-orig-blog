@@ -13,6 +13,20 @@ layout: default
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      {% capture url %}{{ site.url }}{{ post.url }}{% endcapture %}
+      {% capture text %}{{ post.title }} ...{% endcapture %}
+      <ul class="like-buttons">
+          <li class="fb-like">
+      	{% include facebook-share.html url=url %}
+          </li>
+          <li class="fb-tweet">
+      	{% include tweet.html url=url text=text %}
+          </li>
+          <li class="g-plus-one">
+      	{% include google-plus.html url=url %}
+          </li>
+      </ul>
+
     </article>
   {% endfor %}
 </div>
