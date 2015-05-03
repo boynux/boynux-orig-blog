@@ -70,7 +70,7 @@ And here is a simple `bash` script that find public IP address and compare that 
 
 This is configuration file. Copy and paste this text in any editor change email and password to proper values and then paste into terminal. this will create a file in `/etc/sendip.conf` . You can edit this file later.
 
-    cat >>CONFIG | sudo tee /etc/sendip.conf
+    cat >>'CONFIG' | sudo tee /etc/sendip.conf
     # sendip config file
 
     # SMTP Server address with port, default port is 25
@@ -110,7 +110,7 @@ And here is the script. Just copy and paste the whole thing in bash. This will c
 </script>
 </div>
 
-    cat >>CODE | sudo tee /usr/bin/sendip
+    cat >>'CODE' | sudo tee /usr/bin/sendip
     #!/bin/bash
 
     source /etc/sendip.conf
@@ -142,6 +142,8 @@ And here is the script. Just copy and paste the whole thing in bash. This will c
 
     if [[ "$OLDIP" != "$NEWIP" ]]
     then
+        echo $NEWIP | tee /tmp/.ipaddress
+
         MESSAGE=$(expand_message "$EMAIL_MESSAGE")
 
         sendEmail -f $RASPBERRY_EMAIL -t $EMAIL_ADDRESS -s $SMTP_HOST -u $EMAIL_SUBJECT -xu $RASPBERRY_EMAIL -xp $RASPBERRY_PASSWORD -m "$MESSAGE" -o tls=yes
